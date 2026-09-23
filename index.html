@@ -2,31 +2,59 @@
 <html>
 <style>
 	body {
-	  background-image: url('images/thereIsNoOtherHome.png');
+	  	background: url('images/entrance.png');
+	  	background-repeat: no-repeat;
+  		background-size: 100%;
 	}
 	@font-face {
 	  font-family: 'ruritania';
 	  src: local('ruritania'),
 	       url('fonts/ruritania') format('truetype');
 	}
+	@font-face {
+		font-family: "beyondWonderland";
+		src: local("Beyond Wonderland"), 
+			url("fonts/Beyond Wonderland") format("truetype");
+	}
+	div.links {
+		position: relative;
+		top: 22vh;
+		left: 82vw;
+		font-family: beyondWonderland;
+		font-size: 3vh;
+		color: #470c78;
+		text-shadow: 0.5px 0.5px #ffffff, 0.5px -0.5px #ffffff, -0.5px 0.5px #ffffff, -0.5px -0.5px #ffffff;
+	}
+	div.ueberschrift{
+		position: relative;
+		top: 5vh;
+		text-align: center;
+		color: #470c78; 
+		font-size: 5vh; 
+		text-shadow: 1px 1px #ab8dc4, 1px -1px #ab8dc4, -1px 1px #ab8dc4, -1px -1px #ab8dc4; 
+		font-family: ruritania;
+	}
 </style>
 
 <head>
-	<title>🌈Website!?</title>
+	<title>🌈Website⁉️</title>
 </head>
 
 <body>
 	<main>
-		<div style="width: 100%;" align="center">
-			<p style="color: white; font-size: 5vh; font-family: ruritania;">Halli Hallo</p>
+		<div class="ueberschrift">
+			<p>
+				Willkommen auf meiner Website
+			</p>
 		</div>
-		<div style="width:100%;" align="right">
-			<p style="text-align:right; color: white; font-size: 30px;">Links hier:</p>
+		<div class="links">
 			<a href="https://github.com/1am1337"> GitHub</a>
 			<br></br>
 			<a href="soundcloud.com/l3n0r3"> SoundCloud (WIP)</a>
 			<br></br>
-			<a href="https://www.youtube.com/@05k4rIMWI"> YouTube</a>
+			<a href="https://www.youtube.com/@L3n0r3IMWI"> YouTube</a>
+			<br></br>
+			<a href="blog.html"> Blog</a>
 		</div>
 
 		

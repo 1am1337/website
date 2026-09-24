@@ -1,0 +1,15 @@
+@font-face {
+	  font-family: 'ruritania';
+	  src: url('../fonts/ruritania.ttf') format('truetype');
+	}
+
+@font-face {
+    font-family: 'beyondWonderland';
+    src: url('../fonts/Beyond Wonderland.ttf') format('truetype');
+}
+
+body {
+    background: url('../images/entrance.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

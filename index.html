@@ -3,8 +3,7 @@
 <style>
 	body {
 	  	background: url('images/entrance.png');
-	  	background-repeat: no-repeat;
-  		background-size: 100%;
+  		background-size: cover;
 	}
 	@font-face {
 	  font-family: 'ruritania';
@@ -33,6 +32,16 @@
 		color: #470c78;
 		text-shadow: 1px 1px #ffffff, 1px -1px #ffffff, -1px 1px #ffffff, -1px -1px #ffffff;  
 	}
+	div.prideMonthCalc{
+		position: relative;
+		top: 33vh;
+		left:2vw;
+		text-align: left;
+		font-family: beyondWonderland;
+		font-size: 5vh; 
+		color: #470c78;
+		text-shadow: 1px 1px #ffffff, 1px -1px #ffffff, -1px 1px #ffffff, -1px -1px #ffffff; 
+	}
 </style>
 
 <head>
@@ -54,7 +63,45 @@
 			Kontakt unter: <br>
 			<a href="mailto: l3n0r3@icloud.com">l3n0r3@icloud.com</a>
 		</div>
+		<div class="prideMonthCalc">
+		
+			<p id="contDownPrideMonth">placeholder</p>
 
+			<script>
+			// Set the date we're counting down to
+			var nextJuneFirst = "June 1, ";
+			var nextYear = new Date().getFullYear() + 1;
+			var dateNextYear = nextJuneFirst + nextYear;
+			var countDownDate = new Date(dateNextYear).getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+			  // Get today's date and time
+			  var now = new Date().getTime();
+			    
+			  // Find the distance between now and the count down date
+			  var distance = countDownDate - now;
+			    
+			  // Time calculations for days, hours, minutes and seconds
+			  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			    
+			  // Output the result in an element with id="demo"
+			  document.getElementById("contDownPrideMonth").innerHTML = days + "d " + hours + "h "
+			  + minutes + "m " + seconds + "s ";
+			    
+			  // If the count down is over, write some text 
+			  if (distance < 0) {
+			    clearInterval(x);
+			    document.getElementById("contDownPrideMonth").innerHTML = "EXPIRED";
+			  }
+			}, 1000);
+			</script>
+				
+		</div>
 		
 	</main>
 </body>
